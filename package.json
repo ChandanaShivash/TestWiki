@@ -1,0 +1,17 @@
+{
+  "name": "wiki-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "delete:reports": "rm -rf cypress/results/ || true",
+    "delete:videos": "rm -rf cypress/videos/ || true",
+    "test": "npm run delete:reports || true && npm run delete:videos || true && npx cypress run --reporter mochawesome"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^9.5.2",
+    "mochawesome": "^7.1.3"
+  }
+}
